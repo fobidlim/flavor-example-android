@@ -19,22 +19,34 @@ android {
             applicationId "me.fobid.flavorexample.dev"
             testApplicationId "me.fobid.flavorexample.dev.test"
 
-            versionCode 1
-            versionName "1.0.0"
+            println "Using Dev google-services.json"
+            copy {
+                from 'src/dev/'
+                include '*.json'
+                into '.'
+            }
         }
         jp {
             applicationId "me.fobid.flavorexample.jp"
             testApplicationId "me.fobid.flavorexample.jp.text"
 
-            versionCode 2
-            versionName "2.0.0"
+            println "Using Dev google-services.json"
+            copy {
+                from 'src/jp/'
+                include '*.json'
+                into '.'
+            }
         }
         ko {
             applicationId "me.fobid.flavorexample"
             testApplicationId "me.fobid.flavorexample.text"
 
-            versionCode 3
-            versionName "3.0.0"
+            println "Using Dev google-services.json"
+            copy {
+                from 'src/ko/'
+                include '*.json'
+                into '.'
+            }
         }
     }
     sourceSets {
